@@ -1,0 +1,368 @@
+{
+  "contextAwareMode": true,
+  "folderBasedDeck": true,
+  "deck": "default",
+  "inlineID": true,
+  "contextSeparator": ", ",
+  "flashcardsTag": "card",
+  "inlineSeparator": "::",
+  "inlineSeparatorReverse": ":::",
+  "defaultAnkiTag": "obsidian",
+  "sourceSupport": true,
+  "basicModel": "Obsidian-basic",
+  "reversedModel": "Obsidian-basic-reversed",
+  "spacedModel": "Obsidian-spaced",
+  "clozeModel": "Obsidian-cloze",
+  "multilineCards": false,
+  "folderBasedTag": false,
+  "ankiConnectPermission": true,
+  "ankiConnectUrl": "http://localhost:8765",
+  "ankiModelsDna": {
+    "1780434141774": {
+      "id": 1780434141774,
+      "name": "Obsidian-cloze",
+      "type": 1,
+      "mod": 1780868264,
+      "usn": -1,
+      "sortf": 0,
+      "did": null,
+      "tmpls": [
+        {
+          "name": "Cloze",
+          "ord": 0,
+          "qfmt": "{{cloze:Text}}\n{{tts it_IT speed=1.2:Text}}",
+          "afmt": "{{cloze:Text}}\n<br>{{Extra}}\n\n{{#Source}}\n<br><br>\n<a href=\"{{Source}}\" class=\"source-link\" title=\"Source\">\n<svg xmlns=\"http://www.w3.org/2000/svg\" width=\"24\" height=\"24\" viewBox=\"0 0 24 24\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"2\" stroke-linecap=\"round\" stroke-linejoin=\"round\" class=\"lucide lucide-origami-icon lucide-origami\"><path d=\"M12 12V4a1 1 0 0 1 1-1h6.297a1 1 0 0 1 .651 1.759l-4.696 4.025\"/><path d=\"m12 21-7.414-7.414A2 2 0 0 1 4 12.172V6.415a1.002 1.002 0 0 1 1.707-.707L20 20.009\"/><path d=\"m12.214 3.381 8.414 14.966a1 1 0 0 1-.167 1.199l-1.168 1.163a1 1 0 0 1-.706.291H6.351a1 1 0 0 1-.625-.219L3.25 18.8a1 1 0 0 1 .631-1.781l4.165.027\"/></svg>\n</a>\n<script>\n    (function() {\n        var link = document.querySelector('.source-link');\n        if (link) {\n            var href = link.getAttribute('href');\n            if (href) {\n                var match = href.match(/[?&]file=([^&]+)/);\n                if (match) {\n                    var file = decodeURIComponent(match[1]);\n                    if (file.endsWith('.md')) {\n                        file = file.substring(0, file.length - 3);\n                    }\n                    var noteName = file.split('/').pop();\n                    link.setAttribute('title', noteName);\n                }\n            }\n        }\n    })();\n</script>\n{{/Source}}\n{{tts it_IT speed=1.2:Text}}",
+          "bqfmt": "",
+          "bafmt": "",
+          "did": null,
+          "bfont": "",
+          "bsize": 0,
+          "id": "4636302251933615638"
+        }
+      ],
+      "flds": [
+        {
+          "name": "Text",
+          "ord": 0,
+          "sticky": false,
+          "rtl": false,
+          "font": "Arial",
+          "size": 20,
+          "description": "",
+          "plainText": false,
+          "collapsed": false,
+          "excludeFromSearch": false,
+          "id": "6515887103818075453",
+          "tag": null,
+          "preventDeletion": false
+        },
+        {
+          "name": "Extra",
+          "ord": 1,
+          "sticky": false,
+          "rtl": false,
+          "font": "Arial",
+          "size": 20,
+          "description": "",
+          "plainText": false,
+          "collapsed": false,
+          "excludeFromSearch": false,
+          "id": "-7853126860356921019",
+          "tag": null,
+          "preventDeletion": false
+        },
+        {
+          "name": "Source",
+          "ord": 2,
+          "sticky": false,
+          "rtl": false,
+          "font": "Arial",
+          "size": 20,
+          "description": "",
+          "plainText": false,
+          "collapsed": false,
+          "excludeFromSearch": false,
+          "id": "-6156642182493864812",
+          "tag": null,
+          "preventDeletion": false
+        }
+      ],
+      "css": "body {\n    background-color: #000000;\n    margin: 0;\n    padding: 20px;\n    display: flex;\n    justify-content: center;\n    align-items: center;\n}\n.card {\n    background-color: #000000;\n    color: #ffffff;\n    font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;\n    font-size: 22px;\n    text-align: center;\n    line-height: 1.6;\n    border: 1px solid #ffffff;\n    border-radius: 15px;\n    padding: 30px;\n    width: 80%;\n    max-width: 600px;\n    margin: auto;\n    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.8), 0 0 20px rgba(255, 255, 255, 0.15);\n}\n.source-link {\n    color: #a0a0a0;\n    text-decoration: none;\n    display: inline-flex;\n    align-items: center;\n    transition: color 0.35s, transform 0.35s;\n}\n.source-link:hover {\n    color: #3b82f6;\n    transform: scale(1.05);\n}\nb, strong {\n    color: #FF005E;\n    text-shadow: 0 0 8px rgba(255, 0, 94, 0.6), 0 0 15px rgba(255, 0, 94, 0.4);\n}\ni, em {\n    color: #5EFF00;\n    text-shadow: 0 0 8px rgba(94, 255, 0, 0.6), 0 0 15px rgba(94, 255, 0, 0.4);\n}\nb i, strong em, i b, em strong {\n    color: #005EFF;\n    text-shadow: 0 0 8px rgba(0, 94, 255, 0.6), 0 0 20px rgba(0, 94, 255, 0.5);\n}",
+      "latexPre": "\\documentclass[12pt]{article}\n\\special{papersize=3in,5in}\n\\usepackage[utf8]{inputenc}\n\\usepackage{amssymb,amsmath}\n\\pagestyle{empty}\n\\setlength{\\parindent}{0in}\n\\begin{document}\n",
+      "latexPost": "\\end{document}",
+      "latexsvg": false,
+      "req": [
+        [
+          0,
+          "any",
+          [
+            0
+          ]
+        ]
+      ],
+      "originalStockKind": 1
+    },
+    "1780434141766": {
+      "id": 1780434141766,
+      "name": "Obsidian-basic-reversed",
+      "type": 0,
+      "mod": 1780868263,
+      "usn": -1,
+      "sortf": 0,
+      "did": null,
+      "tmpls": [
+        {
+          "name": "Front / Back",
+          "ord": 0,
+          "qfmt": "{{Front}}\n{{tts it_IT speed=1.2:Front}}",
+          "afmt": "{{FrontSide}}\n<hr id=answer>\n{{Back}}\n\n{{#Source}}\n<br><br>\n<a href=\"{{Source}}\" class=\"source-link\" title=\"Source\">\n<svg xmlns=\"http://www.w3.org/2000/svg\" width=\"24\" height=\"24\" viewBox=\"0 0 24 24\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"2\" stroke-linecap=\"round\" stroke-linejoin=\"round\" class=\"lucide lucide-origami-icon lucide-origami\"><path d=\"M12 12V4a1 1 0 0 1 1-1h6.297a1 1 0 0 1 .651 1.759l-4.696 4.025\"/><path d=\"m12 21-7.414-7.414A2 2 0 0 1 4 12.172V6.415a1.002 1.002 0 0 1 1.707-.707L20 20.009\"/><path d=\"m12.214 3.381 8.414 14.966a1 1 0 0 1-.167 1.199l-1.168 1.163a1 1 0 0 1-.706.291H6.351a1 1 0 0 1-.625-.219L3.25 18.8a1 1 0 0 1 .631-1.781l4.165.027\"/></svg>\n</a>\n<script>\n    (function() {\n        var link = document.querySelector('.source-link');\n        if (link) {\n            var href = link.getAttribute('href');\n            if (href) {\n                var match = href.match(/[?&]file=([^&]+)/);\n                if (match) {\n                    var file = decodeURIComponent(match[1]);\n                    if (file.endsWith('.md')) {\n                        file = file.substring(0, file.length - 3);\n                    }\n                    var noteName = file.split('/').pop();\n                    link.setAttribute('title', noteName);\n                }\n            }\n        }\n    })();\n</script>\n{{/Source}}\n{{tts it_IT speed=1.2:Back}}",
+          "bqfmt": "",
+          "bafmt": "",
+          "did": null,
+          "bfont": "",
+          "bsize": 0,
+          "id": "-5110942961300399321"
+        },
+        {
+          "name": "Back / Front",
+          "ord": 1,
+          "qfmt": "{{Back}}\n{{tts it_IT speed=1.2:Back}}",
+          "afmt": "{{FrontSide}}\n<hr id=answer>\n{{Front}}\n\n{{#Source}}\n<br><br>\n<a href=\"{{Source}}\" class=\"source-link\" title=\"Source\">\n<svg xmlns=\"http://www.w3.org/2000/svg\" width=\"24\" height=\"24\" viewBox=\"0 0 24 24\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"2\" stroke-linecap=\"round\" stroke-linejoin=\"round\" class=\"lucide lucide-origami-icon lucide-origami\"><path d=\"M12 12V4a1 1 0 0 1 1-1h6.297a1 1 0 0 1 .651 1.759l-4.696 4.025\"/><path d=\"m12 21-7.414-7.414A2 2 0 0 1 4 12.172V6.415a1.002 1.002 0 0 1 1.707-.707L20 20.009\"/><path d=\"m12.214 3.381 8.414 14.966a1 1 0 0 1-.167 1.199l-1.168 1.163a1 1 0 0 1-.706.291H6.351a1 1 0 0 1-.625-.219L3.25 18.8a1 1 0 0 1 .631-1.781l4.165.027\"/></svg>\n</a>\n<script>\n    (function() {\n        var link = document.querySelector('.source-link');\n        if (link) {\n            var href = link.getAttribute('href');\n            if (href) {\n                var match = href.match(/[?&]file=([^&]+)/);\n                if (match) {\n                    var file = decodeURIComponent(match[1]);\n                    if (file.endsWith('.md')) {\n                        file = file.substring(0, file.length - 3);\n                    }\n                    var noteName = file.split('/').pop();\n                    link.setAttribute('title', noteName);\n                }\n            }\n        }\n    })();\n</script>\n{{/Source}}\n{{tts it_IT speed=1.2:Front}}",
+          "bqfmt": "",
+          "bafmt": "",
+          "did": null,
+          "bfont": "",
+          "bsize": 0,
+          "id": "-7967382555018275347"
+        }
+      ],
+      "flds": [
+        {
+          "name": "Front",
+          "ord": 0,
+          "sticky": false,
+          "rtl": false,
+          "font": "Arial",
+          "size": 20,
+          "description": "",
+          "plainText": false,
+          "collapsed": false,
+          "excludeFromSearch": false,
+          "id": "3802897387099782635",
+          "tag": null,
+          "preventDeletion": false
+        },
+        {
+          "name": "Back",
+          "ord": 1,
+          "sticky": false,
+          "rtl": false,
+          "font": "Arial",
+          "size": 20,
+          "description": "",
+          "plainText": false,
+          "collapsed": false,
+          "excludeFromSearch": false,
+          "id": "2231777793703014882",
+          "tag": null,
+          "preventDeletion": false
+        },
+        {
+          "name": "Source",
+          "ord": 2,
+          "sticky": false,
+          "rtl": false,
+          "font": "Arial",
+          "size": 20,
+          "description": "",
+          "plainText": false,
+          "collapsed": false,
+          "excludeFromSearch": false,
+          "id": "-2452573187800200827",
+          "tag": null,
+          "preventDeletion": false
+        }
+      ],
+      "css": "body {\n    background-color: #000000;\n    margin: 0;\n    padding: 20px;\n    display: flex;\n    justify-content: center;\n    align-items: center;\n}\n.card {\n    background-color: #000000;\n    color: #ffffff;\n    font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;\n    font-size: 22px;\n    text-align: center;\n    line-height: 1.6;\n    border: 1px solid #ffffff;\n    border-radius: 15px;\n    padding: 30px;\n    width: 80%;\n    max-width: 600px;\n    margin: auto;\n    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.8), 0 0 20px rgba(255, 255, 255, 0.15);\n}\n.source-link {\n    color: #a0a0a0;\n    text-decoration: none;\n    display: inline-flex;\n    align-items: center;\n    transition: color 0.35s, transform 0.35s;\n}\n.source-link:hover {\n    color: #3b82f6;\n    transform: scale(1.05);\n}\nb, strong {\n    color: #FF005E;\n    text-shadow: 0 0 8px rgba(255, 0, 94, 0.6), 0 0 15px rgba(255, 0, 94, 0.4);\n}\ni, em {\n    color: #5EFF00;\n    text-shadow: 0 0 8px rgba(94, 255, 0, 0.6), 0 0 15px rgba(94, 255, 0, 0.4);\n}\nb i, strong em, i b, em strong {\n    color: #005EFF;\n    text-shadow: 0 0 8px rgba(0, 94, 255, 0.6), 0 0 20px rgba(0, 94, 255, 0.5);\n}",
+      "latexPre": "\\documentclass[12pt]{article}\n\\special{papersize=3in,5in}\n\\usepackage[utf8]{inputenc}\n\\usepackage{amssymb,amsmath}\n\\pagestyle{empty}\n\\setlength{\\parindent}{0in}\n\\begin{document}\n",
+      "latexPost": "\\end{document}",
+      "latexsvg": false,
+      "req": [
+        [
+          0,
+          "any",
+          [
+            0
+          ]
+        ],
+        [
+          1,
+          "any",
+          [
+            1
+          ]
+        ]
+      ],
+      "originalStockKind": 1
+    },
+    "1780433456980": {
+      "id": 1780433456980,
+      "name": "Obsidian-basic",
+      "type": 0,
+      "mod": 1780868263,
+      "usn": -1,
+      "sortf": 0,
+      "did": 1500098337335,
+      "tmpls": [
+        {
+          "name": "Front / Back",
+          "ord": 0,
+          "qfmt": "{{Front}}\n{{tts it_IT speed=1.2:Front}}",
+          "afmt": "{{FrontSide}}\n<hr id=answer>\n{{Back}}\n\n{{#Source}}\n<br><br>\n<a href=\"{{Source}}\" class=\"source-link\" title=\"Source\">\n<svg xmlns=\"http://www.w3.org/2000/svg\" width=\"24\" height=\"24\" viewBox=\"0 0 24 24\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"2\" stroke-linecap=\"round\" stroke-linejoin=\"round\" class=\"lucide lucide-origami-icon lucide-origami\"><path d=\"M12 12V4a1 1 0 0 1 1-1h6.297a1 1 0 0 1 .651 1.759l-4.696 4.025\"/><path d=\"m12 21-7.414-7.414A2 2 0 0 1 4 12.172V6.415a1.002 1.002 0 0 1 1.707-.707L20 20.009\"/><path d=\"m12.214 3.381 8.414 14.966a1 1 0 0 1-.167 1.199l-1.168 1.163a1 1 0 0 1-.706.291H6.351a1 1 0 0 1-.625-.219L3.25 18.8a1 1 0 0 1 .631-1.781l4.165.027\"/></svg>\n</a>\n<script>\n    (function() {\n        var link = document.querySelector('.source-link');\n        if (link) {\n            var href = link.getAttribute('href');\n            if (href) {\n                var match = href.match(/[?&]file=([^&]+)/);\n                if (match) {\n                    var file = decodeURIComponent(match[1]);\n                    if (file.endsWith('.md')) {\n                        file = file.substring(0, file.length - 3);\n                    }\n                    var noteName = file.split('/').pop();\n                    link.setAttribute('title', noteName);\n                }\n            }\n        }\n    })();\n</script>\n{{/Source}}\n{{tts it_IT speed=1.2:Back}}",
+          "bqfmt": "",
+          "bafmt": "",
+          "did": null,
+          "bfont": "",
+          "bsize": 0,
+          "id": 1356819306
+        }
+      ],
+      "flds": [
+        {
+          "name": "Front",
+          "ord": 0,
+          "sticky": false,
+          "rtl": false,
+          "font": "Arial",
+          "size": 20,
+          "description": "",
+          "plainText": false,
+          "collapsed": false,
+          "excludeFromSearch": false,
+          "id": 3117712387,
+          "tag": null,
+          "preventDeletion": false,
+          "media": []
+        },
+        {
+          "name": "Back",
+          "ord": 1,
+          "sticky": false,
+          "rtl": false,
+          "font": "Arial",
+          "size": 20,
+          "description": "",
+          "plainText": false,
+          "collapsed": false,
+          "excludeFromSearch": false,
+          "id": 2594118803,
+          "tag": null,
+          "preventDeletion": false,
+          "media": []
+        },
+        {
+          "name": "Source",
+          "ord": 2,
+          "sticky": false,
+          "rtl": false,
+          "font": "Arial",
+          "size": 20,
+          "description": "",
+          "plainText": false,
+          "collapsed": false,
+          "excludeFromSearch": false,
+          "id": 1854983993,
+          "tag": null,
+          "preventDeletion": false,
+          "media": []
+        }
+      ],
+      "css": "body {\n    background-color: #000000;\n    margin: 0;\n    padding: 20px;\n    display: flex;\n    justify-content: center;\n    align-items: center;\n}\n.card {\n    background-color: #000000;\n    color: #ffffff;\n    font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;\n    font-size: 22px;\n    text-align: center;\n    line-height: 1.6;\n    border: 1px solid #ffffff;\n    border-radius: 15px;\n    padding: 30px;\n    width: 80%;\n    max-width: 600px;\n    margin: auto;\n    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.8), 0 0 20px rgba(255, 255, 255, 0.15);\n}\n.source-link {\n    color: #a0a0a0;\n    text-decoration: none;\n    display: inline-flex;\n    align-items: center;\n    transition: color 0.35s, transform 0.35s;\n}\n.source-link:hover {\n    color: #3b82f6;\n    transform: scale(1.05);\n}\nb, strong {\n    color: #FF005E;\n    text-shadow: 0 0 8px rgba(255, 0, 94, 0.6), 0 0 15px rgba(255, 0, 94, 0.4);\n}\ni, em {\n    color: #5EFF00;\n    text-shadow: 0 0 8px rgba(94, 255, 0, 0.6), 0 0 15px rgba(94, 255, 0, 0.4);\n}\nb i, strong em, i b, em strong {\n    color: #005EFF;\n    text-shadow: 0 0 8px rgba(0, 94, 255, 0.6), 0 0 20px rgba(0, 94, 255, 0.5);\n}\n\n/* TTS */\n.solo-desktop, .solo-mobile {\n    display: none;\n}\n.desktop .solo-desktop {\n    display: block;\n}\n.mobile .solo-mobile {\n    display: block;\n}",
+      "latexPre": "",
+      "latexPost": "",
+      "latexsvg": false,
+      "req": [
+        [
+          0,
+          "any",
+          [
+            0
+          ]
+        ]
+      ],
+      "originalStockKind": 1,
+      "originalId": 1779801336249,
+      "tags": []
+    },
+    "1780434141770": {
+      "id": 1780434141770,
+      "name": "Obsidian-spaced",
+      "type": 0,
+      "mod": 1780868264,
+      "usn": -1,
+      "sortf": 0,
+      "did": 1780765507253,
+      "tmpls": [
+        {
+          "name": "Spaced",
+          "ord": 0,
+          "qfmt": "{{Prompt}}\n{{tts it_IT speed=1.2:Prompt}}",
+          "afmt": "{{FrontSide}}\n<hr id=answer>🧠 Review done.\n\n{{#Source}}\n<br><br>\n<a href=\"{{Source}}\" class=\"source-link\" title=\"Source\">\n<svg xmlns=\"http://www.w3.org/2000/svg\" width=\"24\" height=\"24\" viewBox=\"0 0 24 24\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"2\" stroke-linecap=\"round\" stroke-linejoin=\"round\" class=\"lucide lucide-origami-icon lucide-origami\"><path d=\"M12 12V4a1 1 0 0 1 1-1h6.297a1 1 0 0 1 .651 1.759l-4.696 4.025\"/><path d=\"m12 21-7.414-7.414A2 2 0 0 1 4 12.172V6.415a1.002 1.002 0 0 1 1.707-.707L20 20.009\"/><path d=\"m12.214 3.381 8.414 14.966a1 1 0 0 1-.167 1.199l-1.168 1.163a1 1 0 0 1-.706.291H6.351a1 1 0 0 1-.625-.219L3.25 18.8a1 1 0 0 1 .631-1.781l4.165.027\"/></svg>\n</a>\n<script>\n    (function() {\n        var link = document.querySelector('.source-link');\n        if (link) {\n            var href = link.getAttribute('href');\n            if (href) {\n                var match = href.match(/[?&]file=([^&]+)/);\n                if (match) {\n                    var file = decodeURIComponent(match[1]);\n                    if (file.endsWith('.md')) {\n                        file = file.substring(0, file.length - 3);\n                    }\n                    var noteName = file.split('/').pop();\n                    link.setAttribute('title', noteName);\n                }\n            }\n        }\n    })();\n</script>\n{{/Source}}",
+          "bqfmt": "",
+          "bafmt": "",
+          "did": null,
+          "bfont": "",
+          "bsize": 0,
+          "id": "-6534899794868578039"
+        }
+      ],
+      "flds": [
+        {
+          "name": "Prompt",
+          "ord": 0,
+          "sticky": false,
+          "rtl": false,
+          "font": "Arial",
+          "size": 20,
+          "description": "",
+          "plainText": false,
+          "collapsed": false,
+          "excludeFromSearch": false,
+          "id": "-2852860374146797371",
+          "tag": null,
+          "preventDeletion": false
+        },
+        {
+          "name": "Source",
+          "ord": 1,
+          "sticky": false,
+          "rtl": false,
+          "font": "Arial",
+          "size": 20,
+          "description": "",
+          "plainText": false,
+          "collapsed": false,
+          "excludeFromSearch": false,
+          "id": "-6790152110573558087",
+          "tag": null,
+          "preventDeletion": false
+        }
+      ],
+      "css": "body {\n    background-color: #000000;\n    margin: 0;\n    padding: 20px;\n    display: flex;\n    justify-content: center;\n    align-items: center;\n}\n.card {\n    background-color: #000000;\n    color: #ffffff;\n    font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;\n    font-size: 22px;\n    text-align: center;\n    line-height: 1.6;\n    border: 1px solid #ffffff;\n    border-radius: 15px;\n    padding: 30px;\n    width: 80%;\n    max-width: 600px;\n    margin: auto;\n    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.8), 0 0 20px rgba(255, 255, 255, 0.15);\n}\n.source-link {\n    color: #a0a0a0;\n    text-decoration: none;\n    display: inline-flex;\n    align-items: center;\n    transition: color 0.35s, transform 0.35s;\n}\n.source-link:hover {\n    color: #3b82f6;\n    transform: scale(1.05);\n}\nb, strong {\n    color: #FF005E;\n    text-shadow: 0 0 8px rgba(255, 0, 94, 0.6), 0 0 15px rgba(255, 0, 94, 0.4);\n}\ni, em {\n    color: #5EFF00;\n    text-shadow: 0 0 8px rgba(94, 255, 0, 0.6), 0 0 15px rgba(94, 255, 0, 0.4);\n}\nb i, strong em, i b, em strong {\n    color: #005EFF;\n    text-shadow: 0 0 8px rgba(0, 94, 255, 0.6), 0 0 20px rgba(0, 94, 255, 0.5);\n}",
+      "latexPre": "\\documentclass[12pt]{article}\n\\special{papersize=3in,5in}\n\\usepackage[utf8]{inputenc}\n\\usepackage{amssymb,amsmath}\n\\pagestyle{empty}\n\\setlength{\\parindent}{0in}\n\\begin{document}\n",
+      "latexPost": "\\end{document}",
+      "latexsvg": false,
+      "req": [
+        [
+          0,
+          "any",
+          [
+            0
+          ]
+        ]
+      ],
+      "originalStockKind": 1
+    }
+  },
+  "customCss": "body {\n    background-color: #000000;\n    margin: 0;\n    padding: 20px;\n    display: flex;\n    justify-content: center;\n    align-items: center;\n}\n.card {\n    background-color: #000000;\n    color: #ffffff;\n    font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;\n    font-size: 22px;\n    text-align: center;\n    line-height: 1.6;\n    border: 1px solid #ffffff;\n    border-radius: 15px;\n    padding: 30px;\n    width: 80%;\n    max-width: 600px;\n    margin: auto;\n    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.8), 0 0 20px rgba(255, 255, 255, 0.15);\n}\n.source-link {\n    color: #a0a0a0;\n    text-decoration: none;\n    display: inline-flex;\n    align-items: center;\n    transition: color 0.35s, transform 0.35s;\n}\n.source-link:hover {\n    color: #3b82f6;\n    transform: scale(1.05);\n}\nb, strong {\n    color: #FF005E;\n    text-shadow: 0 0 8px rgba(255, 0, 94, 0.6), 0 0 15px rgba(255, 0, 94, 0.4);\n}\ni, em {\n    color: #5EFF00;\n    text-shadow: 0 0 8px rgba(94, 255, 0, 0.6), 0 0 15px rgba(94, 255, 0, 0.4);\n}\nb i, strong em, i b, em strong {\n    color: #005EFF;\n    text-shadow: 0 0 8px rgba(0, 94, 255, 0.6), 0 0 20px rgba(0, 94, 255, 0.5);\n}"
+}

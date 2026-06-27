@@ -1,0 +1,10 @@
+{
+  "id": "flashcards-extended-mobile",
+  "name": "Flashcards Extended Mobile",
+  "version": "1.0.0",
+  "minAppVersion": "0.15.0",
+  "description": "Offline APKG Exporter for Android mobile, fully compatible with Flashcards Extended.",
+  "author": "Antigravity",
+  "authorUrl": "",
+  "isDesktopOnly": false
+}
