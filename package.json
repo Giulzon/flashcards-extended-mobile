@@ -1,0 +1,27 @@
+{
+  "name": "app",
+  "version": "1.0.0",
+  "description": "",
+  "main": "main.js",
+  "directories": {
+    "test": "tests"
+  },
+  "scripts": {
+    "test": "jest"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Giulzon/flashcards-extended-mobile.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "type": "commonjs",
+  "bugs": {
+    "url": "https://github.com/Giulzon/flashcards-extended-mobile/issues"
+  },
+  "homepage": "https://github.com/Giulzon/flashcards-extended-mobile#readme",
+  "devDependencies": {
+    "jest": "^30.4.2"
+  }
+}
