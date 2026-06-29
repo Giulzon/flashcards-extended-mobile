@@ -990,7 +990,6 @@ class ObsidianFlashcard extends Plugin {
                 const desktopData = await this.app.vault.adapter.read(desktopConfigPath);
                 const desktopSettings = JSON.parse(desktopData);
                 this.settings = Object.assign(this.settings, desktopSettings);
-                console.log("Forced desktop settings for parity:", desktopSettings);
             }
         } catch(e) {
             console.error("Could not load desktop settings", e);
