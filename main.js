@@ -757,7 +757,33 @@ b i, strong em, i b, em strong {
 }`;
 
         const sourceSupport = this.settings.sourceSupport;
-        const sourceFieldHtml = sourceSupport ? `\n\n{{#Source}}\n<br><br>\n<a href="{{Source}}" class="source-link" title="Source">\n<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-origami-icon lucide-origami"><path d="M12 12V4a1 1 0 0 1 1-1h6.297a1 1 0 0 1 .651 1.759l-4.696 4.025"/><path d="m12 21-7.414-7.414A2 2 0 0 1 4 12.172V6.415a1.002 1.002 0 0 1 1.707-.707L20 20.009"/><path d="m12.214 3.381 8.414 14.966a1 1 0 0 1-.167 1.199l-1.168 1.163a1 1 0 0 1-.706.291H6.351a1 1 0 0 1-.625-.219L3.25 18.8a1 1 0 0 1 .631-1.781l4.165.027"/></svg>\n</a>\n<script>\n    (function() {\n        var link = document.querySelector('.source-link');\n        if (link) {\n            var href = link.getAttribute('href');\n            if (href) {\n                var match = href.match(/[?&]file=([^&]+)/);\n                if (match) {\n                    var file = decodeURIComponent(match[1]);\n                    if (file.endsWith('.md')) {\n                        file = file.substring(0, file.length - 3);\n                    }\n                    var noteName = file.split('/').pop();\n                    link.setAttribute('title', noteName);\n                }\n            }\n        }\n    })();\n</script>\n{{/Source}}` : "";
+        const sourceFieldHtml = sourceSupport ? `\n\n{{#Source}}\n<br><br>\n<a href="{{Source}}" class="source-link" title="Source">
+    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-origami-icon lucide-origami">
+        <path d="M12 12V4a1 1 0 0 1 1-1h6.297a1 1 0 0 1 .651 1.759l-4.696 4.025"/>
+        <path d="m12 21-7.414-7.414A2 2 0 0 1 4 12.172V6.415a1.002 1.002 0 0 1 1.707-.707L20 20.009"/>
+        <path d="m12.214 3.381 8.414 14.966a1 1 0 0 1-.167 1.199l-1.168 1.163a1 1 0 0 1-.706.291H6.351a1 1 0 0 1-.625-.219L3.25 18.8a1 1 0 0 1 .631-1.781l4.165.027"/>
+    </svg>
+</a>
+<script>
+    (function() {
+        var link = document.querySelector('.source-link');
+        if (link) {
+            var href = link.getAttribute('href');
+            if (href) {
+                var match = href.match(/[?&]file=([^&]+)/);
+                if (match) {
+                    var file = decodeURIComponent(match[1]);
+                    if (file.endsWith('.md')) {
+                        file = file.substring(0, file.length - 3);
+                    }
+                    var noteName = file.split('/').pop();
+                    link.setAttribute('title', noteName);
+                }
+            }
+        }
+    })();
+</script>
+{{/Source}}` : "";
 
         const front = `{{Front}}\n{{tts it_IT speed=1.2:Front}}`;
         const back = `{{FrontSide}}\n<hr id=answer>\n{{Back}}${sourceFieldHtml}\n{{tts it_IT speed=1.2:Back}}`;
@@ -980,7 +1006,13 @@ const DEFAULT_SETTINGS = {
 
 class ObsidianFlashcard extends Plugin {
     async onload() {
-        addIcon("mobile-icon", `<svg xmlns="http://www.w3.org/2000/svg" width="100" height="100" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-smartphone-icon lucide-smartphone"><rect width="14" height="20" x="5" y="2" rx="2" ry="2"/><path d="M12 18h.01"/><path d="M 13.265 12.829 C 12.046 11.997 12.064 12.003 10.859 12.829 C 9.875 13.503 9.29 13.072 9.637 11.942 C 10.067 10.544 10.088 10.521 8.894 9.653 C 7.914 8.941 8.175 8.235 9.363 8.214 C 10.815 8.195 11.131 7.35 11.315 6.793 C 11.69 5.661 12.443 5.668 12.822 6.797 C 13.291 8.19 13.309 8.209 14.763 8.209 C 15.956 8.209 16.226 8.925 15.238 9.641 C 14.061 10.496 14.063 10.5 14.492 11.936 C 14.839 13.096 14.247 13.495 13.265 12.829" transform="matrix(0.965926, -0.258819, 0.258819, 0.965926, 0, 0)" transform-origin="12.068 9.549" /></svg>`);
+        addIcon("mobile-icon", `
+    <svg xmlns="http://www.w3.org/2000/svg" width="100" height="100" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-smartphone-icon lucide-smartphone">
+        <rect width="14" height="20" x="5" y="2" rx="2" ry="2"/>
+        <path d="M12 18h.01"/>
+        <path d="M 13.265 12.829 C 12.046 11.997 12.064 12.003 10.859 12.829 C 9.875 13.503 9.29 13.072 9.637 11.942 C 10.067 10.544 10.088 10.521 8.894 9.653 C 7.914 8.941 8.175 8.235 9.363 8.214 C 10.815 8.195 11.131 7.35 11.315 6.793 C 11.69 5.661 12.443 5.668 12.822 6.797 C 13.291 8.19 13.309 8.209 14.763 8.209 C 15.956 8.209 16.226 8.925 15.238 9.641 C 14.061 10.496 14.063 10.5 14.492 11.936 C 14.839 13.096 14.247 13.495 13.265 12.829" transform="matrix(0.965926, -0.258819, 0.258819, 0.965926, 0, 0)" transform-origin="12.068 9.549" />
+    </svg>
+`);
 
         let localData = await this.loadData() || {};
         this.settings = Object.assign({}, DEFAULT_SETTINGS, localData);
