@@ -1049,26 +1049,43 @@ class ObsidianFlashcard extends Plugin {
     }
 
     async generateMediaLinks(cards, filePath) {
+        function arrayBufferToBase64(buffer) {
+            var binary = '';
+            var bytes = new Uint8Array(buffer);
+            var len = bytes.byteLength;
+            for (var i = 0; i < len; i++) { binary += String.fromCharCode(bytes[i]); }
+            return window.btoa(binary);
+        }
+
+        const promises = [];
+
         for (let c of cards) {
-            for (let m of c.mediaNames) {
+            const cardPromises = c.mediaNames.map(async (m) => {
                 let file = this.app.metadataCache.getFirstLinkpathDest(decodeURIComponent(m), filePath);
                 if (file) {
                     try {
-                        function arrayBufferToBase64(buffer) {
-                            var binary = '';
-                            var bytes = new Uint8Array(buffer);
-                            var len = bytes.byteLength;
-                            for (var i = 0; i < len; i++) { binary += String.fromCharCode(bytes[i]); }
-                            return window.btoa(binary);
-                        }
                         let content = await this.app.vault.readBinary(file);
-                        c.mediaBase64Encoded.push(arrayBufferToBase64(content));
+                        return arrayBufferToBase64(content);
                     } catch (e) {
                         console.error(`Flashcards: Could not read media file ${m}:`, e);
+                        return null;
                     }
                 }
-            }
+                return null;
+            });
+
+            promises.push(
+                Promise.all(cardPromises).then(results => {
+                    for (const res of results) {
+                        if (res !== null) {
+                            c.mediaBase64Encoded.push(res);
+                        }
+                    }
+                })
+            );
         }
+
+        await Promise.all(promises);
     }
 
     parseGlobalTags(fileContent, file) {
