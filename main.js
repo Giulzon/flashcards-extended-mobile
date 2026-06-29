@@ -1334,3 +1334,4 @@ class FlashcardsSettingTab extends PluginSettingTab {
 }
 
 module.exports = ObsidianFlashcard;
+module.exports.MDFormatter = MDFormatter;
